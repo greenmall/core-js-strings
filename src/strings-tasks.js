@@ -19,9 +19,11 @@
  *   getStringLength(null) => 0
  *   getStringLength(undefined) => 0
  */
-function getStringLength(/* value */) {
-  throw new Error('Not implemented');
+function getStringLength(value) {
+ return(value.length);
 }
+getStringLength('b');
+
 
 /**
  * Returns true if the value is a string, otherwise returns false.
@@ -37,10 +39,10 @@ function getStringLength(/* value */) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
+function isString(value) {
+  return(_.isString(value));
 }
-
+ isString([]);
 /**
  * Returns the result of concatenation of two strings.
  *
@@ -53,10 +55,10 @@ function isString(/* value */) {
  *   concatenateStrings('aa', '') => 'aa'.
  *   concatenateStrings('', 'bb') => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function concatenateStrings(value1, value2) {
+ return(value1 +value2);
 }
-
+concatenateStrings('aa', 'bb');
 /**
  * Returns the first character of the given string.
  *
@@ -68,10 +70,10 @@ function concatenateStrings(/* value1, value2 */) {
  *   getFirstChar('cat') => 'c'
  *   getFirstChar('') => ''
  */
-function getFirstChar(/* value */) {
-  throw new Error('Not implemented');
+function getFirstChar(value) {
+  return(value[0]);
 }
-
+ getFirstChar('John Doe');
 /**
  * Removes leading and trailing whitespace characters from the string.
  *
@@ -83,9 +85,10 @@ function getFirstChar(/* value */) {
  *   removeLeadingAndTrailingWhitespaces('cat ') => 'cat'
  *   removeLeadingAndTrailingWhitespaces('\t\t\tHello, World! ') => 'Hello, World!'
  */
-function removeLeadingAndTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeLeadingAndTrailingWhitespaces(value ) {
+  return(value.trim());
 }
+removeLeadingAndTrailingWhitespaces('  Abracadabra');
 
 /**
  * Removes only leading whitespace characters from the string.
@@ -98,9 +101,11 @@ function removeLeadingAndTrailingWhitespaces(/* value */) {
  *   removeLeadingWhitespaces('cat ') => 'cat '
  *   removeLeadingWhitespaces('\t\t\tHello, World! ') => 'Hello, World! '
  */
-function removeLeadingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeLeadingWhitespaces(value) {
+return(value.trimStart());
 }
+removeLeadingWhitespaces('  Abracadabra');
+
 
 /**
  * Removes only trailing whitespace characters from the string.
@@ -113,10 +118,10 @@ function removeLeadingWhitespaces(/* value */) {
  *   removeTrailingWhitespaces('cat ') => 'cat'
  *   removeTrailingWhitespaces('\t\t\tHello, World! ') => '\t\t\tHello, World!'
  */
-function removeTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeTrailingWhitespaces(value) {
+ return(value.trimRight());
 }
-
+removeTrailingWhitespaces('  Abracadabra');
 /**
  * Returns a string that is repeated the specified number of times.
  *
@@ -130,9 +135,10 @@ function removeTrailingWhitespaces(/* value */) {
  *   repeatString('', 3) => ''
  *   repeatString('abc', -2) => ''
  */
-function repeatString(/* str, times */) {
-  throw new Error('Not implemented');
+function repeatString(str, times) {
+  return(str.repeat(times));
 }
+repeatString('A', 5);
 
 /**
  * Remove the first occurrence of a substring from a string.
@@ -146,10 +152,10 @@ function repeatString(/* str, times */) {
  *   removeFirstOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeFirstOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeFirstOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
+function removeFirstOccurrences(str, value) {
+  return(str.replace(0, value));
 }
-
+removeFirstOccurrences('To be or not to be', 'be');
 /**
  * Remove the last occurrence of a substring from a string.
  *
@@ -178,7 +184,7 @@ function removeLastOccurrences(/* str, value */) {
  *   sumOfCodes('') => 0
  *   sumOfCodes() => 0
  */
-function sumOfCodes(/* str */) {
+function sumOfCodes(str) {
   throw new Error('Not implemented');
 }
 
@@ -193,10 +199,10 @@ function sumOfCodes(/* str */) {
  *   startsWith('Hello World', 'World') => false
  *   startsWith('Hello World', 'Hello') => true
  */
-function startsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function startsWith( str, substr) {
+  return(str.startsWith(substr));
 }
-
+startsWith('Hello World', 'World');
 /**
  * Checks if a string ends with a specific substring.
  *
